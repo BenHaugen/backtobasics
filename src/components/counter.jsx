@@ -9,10 +9,15 @@ class Counter extends Component {
     return (
       <div>
       <h1>Hello World</h1>
-      <span>{this.state.count}</span>
+      <span>{this.formatCount()}</span>
       <button>Increment</button>
       </div>
     );
+  }
+
+  formatCount() {
+    const {count} = this.state;
+    return count === 0 ? 'Zero' : count;
   }
 
 }
