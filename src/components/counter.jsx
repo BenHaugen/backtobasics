@@ -5,7 +5,7 @@ class Counter extends Component {
   state = {}
   render() {
     return (
-      <div></div>
+      <h1>Hello World</h1>
     );
   }
 
