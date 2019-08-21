@@ -31,3 +31,11 @@
     transform: rotate(360deg);
   }
 }
+
+.count {
+  color: blue;
+}
+
+.button {
+  border-radius: 15px;
+}
