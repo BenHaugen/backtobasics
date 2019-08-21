@@ -13,18 +13,22 @@ class Counter extends Component {
     fontWeight: 'bold'
   }
 
+  renderTags() {
+    if (this.state.tags.length === 0) return <p>There are no tags</p>;
+
+    return <ul>{this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}</ul>
+  }
+
   render() {
     // let classes = 'count';
     // classes += {this.state.count === 0}
 
     return (
       <div>
-      <img src={this.state.imageUrl} alt=""/>
-      <span style={this.styles} className="count">{this.formatCount()}</span>
-      <button className="button">Increment</button>
-      <ul>
-        {this.state.tags.map(tag => <li key={tag}>{ tag }</li>)}
-      </ul>
+        <img src={this.state.imageUrl} alt=""/>
+        <span style={this.styles} className="count">{this.formatCount()}</span>
+        <button className="button">Increment</button>
+        {this.renderTags()}
       </div>
     );
   }
