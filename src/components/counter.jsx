@@ -6,11 +6,17 @@ class Counter extends Component {
     count: 0,
     imageUrl: 'https://picsum.photos/199'
   }
+
+  styles = {
+    fontSize: 50,
+    fontWeight: 'bold'
+  }
+
   render() {
     return (
       <div>
       <img src={this.state.imageUrl} alt=""/>
-      <span className="count">{this.formatCount()}</span>
+      <span style={this.styles} className="count">{this.formatCount()}</span>
       <button className="button">Increment</button>
       </div>
     );
