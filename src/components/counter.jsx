@@ -25,9 +25,11 @@ class Counter extends Component {
 
     return (
       <div>
+        <div>
         <img src={this.state.imageUrl} alt=""/>
+        </div>
         <span style={this.styles} className="count">{this.formatCount()}</span>
-        <button className="button">Increment</button>
+        <button className="btn btn-secondary btn-sm">Increment</button>
         {this.renderTags()}
       </div>
     );
